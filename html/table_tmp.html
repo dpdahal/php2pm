@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            background:#e3e3e3;
+        }
+        table tr td a{
+            text-decoration: none;
+            padding: 10px;
+
+        }
+
+        table tr td a:hover{
+           background: red;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 align="center" id="digitalClock"></h1>
+
+
+<table width="960" align="center" border="1">
+    <tr>
+        <td height="80" colspan="3" bgcolor="green">Logo</td>
+    </tr>
+    <tr >
+        <td colspan="3" align="right" height="40"  >
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </td>
+    </tr>
+    <tr>
+        <td height="400" width="600" rowspan="2" bgcolor="blue">Slider</td>
+        <td height="200" colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            News
+        </td>
+    </tr>
+    <tr>
+        <td height="200" width="300">Image</td>
+        <td width="300"></td>
+        <td width="300"></td>
+    </tr>
+    <tr>
+        <td height="100" bgcolor="black" colspan="3">footer</td>
+    </tr>
+</table>
+
+
+<script>
+
+    function digitalClock() {
+        var dd = new Date();
+        var tm = dd.toLocaleTimeString();
+        document.getElementById('digitalClock').innerHTML = tm;
+
+    }
+
+    setInterval(function () {
+        digitalClock();
+    },1000);
+
+
+</script>
+
+</body>
+</html>
